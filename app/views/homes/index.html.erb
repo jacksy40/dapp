@@ -1,4 +1,54 @@
-<p>
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
-</p>
+<nav class="large-12 columns bar">
+  <div class="small-6 columns title">
+    <li class="name">
+      <a href="/" style="color: #9dbaf2; font-size: 20px;">Dapper</a>
+    </li>
+  </div>
+
+  <div class="small-6 columns sign">
+    <%- if current_user -%>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li>Already a member?  <%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
+  </div>
+</nav>
+
+
+<div class="index-top">
+  <div class="row">
+    <div class="large-12 columns middle">
+      <li><h1>Dapper</h1></li>
+      <li style="font-size: 28px;">Join the best 6' 2" dating site ever.</li>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    </div>
+  </div>
+</div>
+
+<div class="row index-bottom">
+        <div class="large-12 columns index-img">
+          <div class="large-4 columns img">
+            <li><%= image_tag("images1.jpg") %></li>
+            <li>Sign up is short and simple.</li>
+          </div>
+          <div class="large-4 columns img">
+            <li><%= image_tag("images.jpg") %></li>
+            <li>Our algorithm marries the best matches!</li>
+          </div>
+          <div class="large-4 columns img">
+            <li><%= image_tag("images3.jpg", size: "328x164") %></li>
+            <li>He's Tall.</li>
+          </div>
+        </div>
+</div>
+    <div class="row">
+      <div class="large-12 columns index-footer">
+        <div class="large-8 columns">
+          <p>"I found my Tall, Dark and Handsome on Dapper." ~ Mrs. Lucky</p>
+        </div>
+        <div class="large-4 columns claimer">
+          <p> About Dapper | @Legal | Investors </p>
+        </div>
+      </div>
+    </div>
+

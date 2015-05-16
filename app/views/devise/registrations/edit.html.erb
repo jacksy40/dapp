@@ -1,7 +1,28 @@
+<div class="e-msg"><%= devise_error_messages! %></div>
+
+<nav class="large-12 columns bar">
+  <div class="small-6 columns title">
+    <li class="name">
+      <a href="/" style="color: #9dbaf2; font-size: 20px;">Dapper</a>
+    </li>
+  </div>
+
+  <div class="small-6 columns sign">
+    <%- if current_user -%>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li>Already a member?  <%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
+  </div>
+</nav>
+
+<div class="devise">
+  <div class="row">
+    <div class="small-6 small-centered columns index-top">
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -28,12 +49,24 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: "small button" %>
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
+<div class="devise">
+  <div class="small-8 small-centered columns index-bottom">
 
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+    </div>
+  </div>
+</div>
+
+<div class="index-bottom">
+<%= image_tag("http://i.huffpost.com/gen/1283929/images/o-ONLINE-DATING-facebook.jpg") %>
+</div>

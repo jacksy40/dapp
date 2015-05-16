@@ -1,3 +1,23 @@
+<nav class="large-12 columns bar">
+  <div class="small-6 columns title">
+    <li class="name">
+      <a href="/" style="color: #9dbaf2; font-size: 20px;">Dapper</a>
+    </li>
+  </div>
+
+  <div class="small-6 columns sign">
+    <%- if current_user -%>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li>Already a member?  <%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
+  </div>
+</nav>
+
+<div class="devise">
+  <div class="row">
+    <div class="small-6 small-centered columns index-top">
+
 <h2>Resend confirmation instructions</h2>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -9,8 +29,15 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend confirmation instructions", class: "small button" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
+
+<div class="index-bottom">
+<%= image_tag("http://i.huffpost.com/gen/1283929/images/o-ONLINE-DATING-facebook.jpg") %>
+</div>

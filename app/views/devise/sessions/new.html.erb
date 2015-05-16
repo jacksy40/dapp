@@ -1,26 +1,53 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="e-msg"><%= devise_error_messages! %></div>
+<nav class="large-12 columns bar">
+  <div class="small-6 columns title">
+    <li class="name">
+      <a href="/" style="color: #9dbaf2; font-size: 20px;">Dapper</a>
+    </li>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="small-6 columns sign">
+    <%- if current_user -%>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li>Already a member?  <%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
   </div>
+</nav>
+<div class="devise">
+  <div class="row">
+    <div class="small-6 small-centered columns index-top">
 
-  <% if devise_mapping.rememberable? -%>
+  <h2>Log in</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "small button" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+    </div>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+<div class="index-bottom">
+<%= image_tag("http://i.huffpost.com/gen/1283929/images/o-ONLINE-DATING-facebook.jpg") %>
+</div>

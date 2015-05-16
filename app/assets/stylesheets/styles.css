@@ -1,0 +1,150 @@
+li {
+  list-style: none;
+}
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.index-top {
+background-color: #104da1;
+height: 475px;
+color: #fff;
+}
+
+nav, .top-bar {
+  background-color: #104da1;
+  height: auto;
+}
+
+.title {
+  font-family: 'Alegreya', serif;
+  padding-top: 1.7em;
+}
+
+.index-bottom {
+height: 325px;
+background-color: #fff;
+
+}
+
+.middle {
+  margin-top: 8em;
+  text-align: center;
+  display: inline;
+}
+
+.middle > li > h1 {
+  font-family: 'Alegreya', serif;
+  border-style: dotted;
+  border-width: 4px;
+  width: 3.5em;
+  border-color: #fff;
+  color: #fff;
+  font-size: 80px;
+}
+
+.middle > li {
+  list-style: none;
+  display: inline-block;
+  color: #fff;
+  margin-right: 1em;
+}
+
+
+.title > li {
+  list-style: none;
+  display: inline-block;
+  color: #fff;
+  margin-right: 1em;
+}
+.sign > li{
+  list-style: none;
+  display: inline-block;
+  color: #fff;
+  margin-top: .7em;
+  margin-right: 1em;
+}
+
+.sign {
+  padding-top: 1.5em;
+  text-align: right;
+}
+
+.sign > li > a {
+  padding: .5em;
+  border-style: dotted;
+  border-width: 1px;
+  color: #9dbaf2;
+}
+
+.sign > li > a:hover {
+  color: #fff;
+  background-color: #9dbaf2;
+}
+
+.middle > li > a {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #00d280;
+  font-size: 20px;
+}
+
+.middle > li > a:hover {
+  color: #fff;
+  background-color: #9dbaf2;
+}
+
+.index-img {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.img > li {
+  list-style: none;
+  font-size: 22px;
+  color:  #104da1;
+  text-align: center;
+  height: 164px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.img > li > img {
+  height: 164px;
+
+}
+
+.index-footer {
+  height: 100px;
+}
+
+.devise {
+  background-color: #104da1;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.index-top > h2 {
+  background-color: #104da1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+}
+
+.index-top,  label {
+  background-color: #104da1;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #9dbaf2;
+}
+
+.actions > input {
+  background-color: #00d280;
+}
+
+.index-top > a {
+  color: #fff;
+}
+
+
+
+
